@@ -1,0 +1,263 @@
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+body{
+    padding: 0;
+    margin: 0 auto; 
+    /* max-width: 1020px; */
+    position: relative;
+    width: 1020px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    width: 1020px;
+    height: 100%;
+  }
+  
+  header{
+    /* position: absolute; */
+    background-color: #2d303a;
+    width: 1020px; 
+    height: 89px;
+    border-bottom: 6px solid #323746;
+  }
+
+  .logo {
+      float: left;
+      padding-top: 12px;
+      height: 89px;
+  }
+  
+  .logo h1{
+    letter-spacing: -0.5px;
+    margin-left: 40px;
+    font-size: 25px;
+    /* line-height: 25px; */
+    color: #ffffff;
+    font-family: "Lato";
+    font-weight: 500;
+    text-transform: uppercase; 
+  }
+  
+  
+  .logo h1::after{ 
+    content: '*'; 
+    color: #f06c64;
+  }
+  
+  .logo h1:hover{
+    color: #f06c64;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  nav {
+    float: right;  
+    padding: 0px 0px; 
+  }
+  .navigation{
+    float: left; 
+    padding: 0px 40px; 
+  }
+  
+  .active {
+    color: #f06c64;
+  }
+  .navigation li{ 
+    display: inline-block;
+    padding: 24px 0px;
+    border: 0; 
+    margin: 0; 
+  }
+  nav li::before{ 
+    content: '•';
+    font-size: 10px;
+    color: #494e62;
+    padding-right: 13.5px;
+    padding-left: 8px; 
+  }
+  
+  nav li:first-child::before{
+    display: none;
+    padding: 0px 0px;
+  
+  }
+  
+  nav li a{
+    font-weight: 400;
+    font-family: 'LatoWebSemibold', sans-serif;
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+    color: #fff;
+  }
+  nav li a:hover{
+    color: #f06c64;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  main{
+    position: relative;
+    width: 100%;
+    background-color:#f06c64;
+    height: 594px;
+    border-bottom: solid 6px #ea676b;
+  }
+  .slider{
+    position: absolute;
+    height: 100%;
+    width: 1024px;
+    /* left: 111px; */
+  }
+  
+  .slider__images{
+    position: relative;
+    width: calc(100% - 112px - 111px);
+    height: 100%;
+  }
+
+
+  #slider__img__iphone1{ 
+    position: absolute;
+    width: 313px;
+    height: 100%;
+    left: 111px;
+
+  }
+
+  #iphone_1 {
+    position: absolute;
+    z-index: 1;
+    padding-top: 53px;
+  }
+
+  #shadow_1 {
+    position: absolute;
+    z-index: 0;
+    padding-top: 53px;
+    
+  }
+  #display_1{
+    position: absolute;
+    z-index: 2;
+    padding-top: 115px;
+    padding-left: 11px;
+  }
+  
+  #slider_img__display1 {
+      position: absolute;
+  }
+
+
+  #slider__img__iphone2{
+    position: absolute;
+    padding: 171px 0 0 73px;
+  }
+  
+  .slider__prev {
+    position: absolute;
+    width: 112px;
+    height: 100%;
+    left: 0;
+    cursor: pointer;
+  }
+  .slider__prev img {
+      margin-top: 281px;
+      margin-left: 42px;
+  }
+  
+  .slider__next {
+    position: absolute;
+    width: 111px;
+    height: 100%;
+    right: 0;
+    cursor: pointer;
+    /* height: 100%; */
+    /* padding-left: 55px; */
+  }
+  .slider__next img {
+    margin-top: 281px;
+    margin-left: 55px;
+}
+
+  
+  .services{
+    /* position: absolute; */
+    width: 1020px;
+    background-color: #f2f2f2;
+    height: 594px;
+    border-bottom: 6px solid #ffffff;
+  }
+  
+  .services__discription{
+    padding:  37px 40px 0px 40px;
+  }
+  .services__discription h2{
+    font-family: 'LatoWebBlack', sans-serif;
+    font-size: 22.5pt;
+    letter-spacing: -0.2px; 
+    color:#666d89;
+    margin-bottom: 0; 
+  }
+  .services__discription p{
+    font-family: 'LatoWebLight', sans-serif;
+    font-size: 13pt;
+    letter-spacing: 0.22px; 
+    line-height: 1.8;
+    color:#767e9e;
+    margin-top: 15px;
+  }
+  .services__blocks{
+    position: relative;
+    display: inline-flex;
+    flex-wrap:  wrap; 
+    padding-left: 30px;
+  }
+  
+  .services__block{
+    position: relative;
+    width: 33%;
+    margin: 1.4px -6.8px -5px 0px;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .services__block__icon{
+    position: relative;
+    margin: 25px 10px 0px 10px;
+  }
+  
+  .services__block__text{
+    margin: 5px 0px -2.2px 10px;
+    max-width: 220px;
+    color:#666d89; 
+  }
+  
+  .services__block__text h3{
+    font-family: "LatoWebBlack", sans-serif;
+    margin-bottom: -0.2px;
+    font-size: 14pt;
+    letter-spacing: -0.4px;
+  }
+  .services__block__text p{
+    margin-top: 8px;
+    font-family: "LatoWebSemibold", sans-serif;
+    font-size: 9pt;
+    color: #767e9e;
+    line-height: 21px;
+    text-align: justify;
+  }
+  .services__block__text_transfer{
+    letter-spacing: -0.1px;
+  }
+  
