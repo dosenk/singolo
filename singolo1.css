@@ -9,7 +9,6 @@ html {
 body{
     padding: 0;
     margin: 0 auto; 
-    /* max-width: 1020px; */
     position: relative;
     width: 1020px;
   }
@@ -24,7 +23,6 @@ body{
   }
   
   header{
-    /* position: absolute; */
     background-color: #2d303a;
     width: 1020px; 
     height: 89px;
@@ -41,7 +39,6 @@ body{
     letter-spacing: -0.5px;
     margin-left: 40px;
     font-size: 25px;
-    /* line-height: 25px; */
     color: #ffffff;
     font-family: "Lato";
     font-weight: 500;
@@ -117,22 +114,20 @@ body{
     position: absolute;
     height: 100%;
     width: 1024px;
-    /* left: 111px; */
   }
   
   .slider__images{
-    position: relative;
-    width: calc(100% - 112px - 111px);
+    position: absolute;
+    width: calc(100% - 112px - 112px);
     height: 100%;
+    left: 112px;
   }
 
 
   #slider__img__iphone1{ 
-    position: absolute;
     width: 313px;
     height: 100%;
-    left: 111px;
-
+    float: left;
   }
 
   #iphone_1 {
@@ -153,15 +148,32 @@ body{
     padding-top: 115px;
     padding-left: 11px;
   }
-  
-  #slider_img__display1 {
-      position: absolute;
+
+  #slider__img__iphone2{ 
+    width: 487px;
+    height: 100%;
+    float: right;
   }
 
-
-  #slider__img__iphone2{
+  #iphone_2 {
     position: absolute;
-    padding: 171px 0 0 73px;
+    z-index: 1;
+    padding-bottom: 173px;
+    padding-right: 69px;
+    transform: rotate(90deg);
+  }
+
+  #shadow_2 {
+    position: absolute;
+    z-index: 0;
+    padding-top: 174px;
+    
+  }
+  #display_2{
+    position: absolute;
+    z-index: 2;
+    padding-top: 185px;
+    padding-left: 57px;
   }
   
   .slider__prev {
@@ -187,10 +199,9 @@ body{
   }
   .slider__next img {
     margin-top: 281px;
-    margin-left: 55px;
+    margin-left: 51px;
 }
 
-  
   .services{
     /* position: absolute; */
     width: 1020px;
@@ -205,7 +216,7 @@ body{
   .services__discription h2{
     font-family: 'LatoWebBlack', sans-serif;
     font-size: 22.5pt;
-    letter-spacing: -0.2px; 
+    letter-spacing: -1px; 
     color:#666d89;
     margin-bottom: 0; 
   }
@@ -260,4 +271,6 @@ body{
   .services__block__text_transfer{
     letter-spacing: -0.1px;
   }
+
+
   
