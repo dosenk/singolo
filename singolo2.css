@@ -18,7 +18,21 @@ body {
     position: relative;
     background-color: #2d303a;
 }
+.portfolio__pictures {
+    height: 600px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio__pictures img {
+    flex: 1;
+    width: 220px;
+    height: 187px;
+    margin: 10px;
+    /* justify-content: space-around; */
 
+}
 .portfolio__line {
     height: 6px;
     /* position: absolute; */
