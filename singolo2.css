@@ -68,6 +68,12 @@ body {
     background-color: Transparent;
 }
 
+.portfolio__tags button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
 .tag{
     color: #666d89;
     border: 1px solid #666d89;
