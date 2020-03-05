@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="singolo2.css">
+    <link rel="stylesheet" type="text/css" href="singolo3.css">
     <link rel="stylesheet" type="text/css" href="fonts.css">
     <title>Singolo</title>
 </head>
@@ -16,21 +16,45 @@
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="contact_information">
                 <form action="#" method="POST">
-                    <input name="name" placeholder="Name(Required)" type="text" required>
-                    <input name="email" placeholder="Email(Required)" type="text" required>
+                    <input name="name" placeholder="Name(Required)" pattern="^[a-zA-Z]{1,20}$" type="text" required>
+                    <input name="email" placeholder="Email(Required)" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" type="text" required>
                     <input name="subject" placeholder="Subject" type="text">
-                    <input name="detail" placeholder="Describe your project in detail..." type="text">
+                    <input name="detail" placeholder="Describe your project in detail..." cols="100" rows="10">
                     <input type="submit" value="send">
                 </form>
-                <div class="info">
+                <div class="quote_info">
                     <h3>Contact Information</h3>
                     <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis</p>
+                    <div class="quote_info__about">
+                        <div class="quote_info__about-info">
+                            <img src="assets/img/quote_info__aboute-location.png" alt="">
+                            <p>Elm St. 14/05 Lost City</p>
+                        </div>
+                        <div class="quote_info__about-info">
+                            <img src="assets/img/quote_info__aboute-phone.png" alt="">
+                            <p>03528 331 86 35</p>
+                        </div>
+                        <div class="quote_info__about-info">
+                            <img src="assets/img/quote_info__aboute-mail.png" alt="">
+                            <p>info@singolo.com</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <footer>
-
+        <div class="container">
+            <div id="copyright">
+                <img src="assets/img/copyright.png" alt="">
+            </div>
+            <div class="social_media">
+                <a class="icon icon_facebook" href="#"><img src="assets/img/about_us__icon_facebook.png" alt=""></a>
+                <a class="icon icon_google" href="#"><img src="assets/img/about_us__icon_google.png" alt=""></a>
+                <a class="icon icon_twitter" href="#"><img src="assets/img/about_us__icon_twitter.png" alt=""></a>
+                <a class="icon icon_linkedin" href="#"><img src="assets/img/about_us__icon_linkedin.png" alt=""></a>
+            </div>
+        </div>
     </footer>
 </body>
 

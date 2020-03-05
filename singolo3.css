@@ -10,18 +10,70 @@ body {
     margin: 0 auto;
     height: 1100px;
     padding: 0;
+    /* background-color: #f06c64; */
 }
+
+
+/* ################################### quote ######################################### */
 
 .quote {
     height: 654px;
+    position: relative;
+    background-color: #f06c64;
+    padding: 0;
+    margin: 0;
+    color: #f0d8d9;
+}
+
+.container {
+    padding: 30px;
+    font-family: 'Lato';
+}
+
+
+/* #################################### footer ########################################## */
+
+footer {
+    height: 76.10px;
     position: relative;
     background-color: #2d303a;
     padding: 0;
     margin: 0;
 }
 
-.container {
-    padding: 30px;
-    font-family: 'Lato';
-    color: #666d89;
+footer .container {
+    margin: 0;
+    padding: 0;
+}
+
+#copyright {
+    margin-left: 42px;
+    margin-top: 28px;
+    width: 200px;
+    float: left;
+}
+
+.social_media {
+    margin-right: 34px;
+    margin-top: 22px;
+    float: right;
+}
+
+.social_icons {
+    /* margin-top: 24px; */
+    padding-left: 1px;
+}
+
+.icon {
+    display: inline-block;
+    height: 32px;
+}
+
+.icon img:hover {
+    background-color: burlywood;
+    border-radius: 20px;
+}
+
+.icon img {
+    margin-right: 5px;
 }
