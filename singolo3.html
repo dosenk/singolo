@@ -16,32 +16,33 @@
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="contact_information">
                 <form action="#" method="POST">
-                    <input name="name" placeholder="Name(Required)" pattern="^[a-zA-Z]{1,20}$" type="text" required>
-                    <input name="email" placeholder="Email(Required)" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" type="text" required>
+                    <input name="name" placeholder="Name (Required)" pattern="^[a-zA-Z]{1,20}$" type="text" required>
+                    <input name="email" placeholder="Email (Required)" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" type="text" required>
                     <input name="subject" placeholder="Subject" type="text">
-                    <input name="detail" placeholder="Describe your project in detail..." cols="100" rows="10">
-                    <input type="submit" value="send">
+                    <textarea name="detail" placeholder="Describe your project in detail..." type="text"></textarea>
+                    <input id="contact__send_form" type="submit" value="send">
                 </form>
                 <div class="quote_info">
                     <h3>Contact Information</h3>
                     <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis</p>
                     <div class="quote_info__about">
                         <div class="quote_info__about-info">
-                            <img src="assets/img/quote_info__aboute-location.png" alt="">
+                            <div><img src="assets/img/quote_info__aboute-location.png" alt="location"></div>
                             <p>Elm St. 14/05 Lost City</p>
                         </div>
                         <div class="quote_info__about-info">
-                            <img src="assets/img/quote_info__aboute-phone.png" alt="">
+                            <div><img src="assets/img/quote_info__aboute-phone.png" alt="phone"></div>
                             <p>03528 331 86 35</p>
                         </div>
                         <div class="quote_info__about-info">
-                            <img src="assets/img/quote_info__aboute-mail.png" alt="">
+                            <div><img src="assets/img/quote_info__aboute-mail.png" alt="mail"></div>
                             <p>info@singolo.com</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="quote_line"></div>
     </section>
     <footer>
         <div class="container">
