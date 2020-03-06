@@ -24,9 +24,48 @@ body {
     color: #f0d8d9;
 }
 
-.container {
-    padding: 30px;
+.quote .container {
+    padding: 59px 39px 30px 40px;
     font-family: 'Lato';
+}
+
+.quote h2 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.quote p {
+    margin-top: 18px;
+    text-align: justify;
+    font-size: 18px;
+    letter-spacing: -0.22px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.contact_information form {
+    width: 620px;
+    padding: 0;
+    float: left;
+}
+
+.contact_information .quote_info {
+    width: 300px;
+    float: right;
+    text-align: left;
+}
+
+.quote_info h3 {
+    margin: 24px 0 0 0;
+    letter-spacing: -0.3px;
+}
+
+.quote_info p {
+    margin-top: 8px;
+    letter-spacing: -0.03px;
+    font-size: 12px;
+    line-height: 22px;
 }
 
 
