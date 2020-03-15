@@ -1,10 +1,13 @@
 window.onload = () => {
 
     moveToActiveSection();
+
     turnScreen();
+    slideMainDisplay();
+ 
     
 }
-
+// ############################# header ############################################
 const moveToActiveSection = () => {
     document.querySelector('.navigation').addEventListener('click', (e) => {
         if (e.target.classList.contains('nav')) {
@@ -26,9 +29,22 @@ const selectCleckedTag = (clicedTag) => {
     clicedTag.classList.add('active');
 }
 
+// ############################### main ###############################################
+
 const turnScreen = () => {
     let slider = document.querySelectorAll('.slider__images_display');
     slider.forEach(slid => {
         slid.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 1 ? 0 : 1);
     })
 }
+
+const slideMainDisplay = () => {
+    previousSlide();
+nextSlide(); 
+}
+
+
+const previousSlide = () => {
+
+}
+
