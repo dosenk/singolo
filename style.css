@@ -34,6 +34,10 @@ header .container {
     margin: 12px 0 0 40px;
 }
 
+.logo a {
+    text-decoration: none;
+}
+
 .logo h1 {
     letter-spacing: -0.5px;
     font-size: 25px;
@@ -51,7 +55,6 @@ header .container {
 .logo h1:hover {
     color: #f06c64;
     cursor: pointer;
-    text-decoration: none;
 }
 
 nav {
@@ -118,6 +121,13 @@ main {
     left: 112px;
 }
 
+.slider__images2 {
+    position: absolute;
+    height: 100%;
+    width: 1024px;
+    border-bottom: solid 6px white;
+}
+
 #slider__img__iphone1 {
     width: 313px;
     height: 100%;
@@ -139,8 +149,10 @@ main {
 #display_1 {
     position: absolute;
     z-index: 2;
-    padding-top: 115px;
-    padding-left: 11px;
+    margin: 115px 0 0 11px;
+}
+.slider__images_display {
+    transition: .4s;
 }
 
 #slider__img__iphone2 {
@@ -167,8 +179,7 @@ main {
 #display_2 {
     position: absolute;
     z-index: 2;
-    padding-top: 185px;
-    padding-left: 57px;
+    margin: 185px 0 0 57px;
 }
 
 .slider__prev {
@@ -190,6 +201,14 @@ main {
     height: 100%;
     right: 0;
     cursor: pointer;
+}
+
+.slider__prev:hover, .slider__next:hover  {
+    opacity: 0.1;
+    /* border: 2px solid black; */
+    height: 600px;
+    width: 111px;
+    background-color: white;
 }
 
 .slider__next img {

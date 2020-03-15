@@ -1,28 +1,34 @@
 window.onload = () => {
 
     moveToActiveSection();
-
+    turnScreen();
     
 }
 
 const moveToActiveSection = () => {
     document.querySelector('.navigation').addEventListener('click', (e) => {
-        // console.log(e.target.classList);
         if (e.target.classList.contains('nav')) {
             let clickedTag = e.target;
             removeSelectedTags();
+            selectCleckedTag(clickedTag);
         }
     });
-    // console.log(element);
-    // element.forEach(el => {
-    //     el.addEventListener('click');
-    // });
 }
 
 const removeSelectedTags = () => {
     let tags = document.querySelectorAll('.navigation .nav');
-    console.log(tags);
     tags.forEach(tag => {
         tag.classList.remove('active');
     });
+}
+
+const selectCleckedTag = (clicedTag) => {
+    clicedTag.classList.add('active');
+}
+
+const turnScreen = () => {
+    let slider = document.querySelectorAll('.slider__images_display');
+    slider.forEach(slid => {
+        slid.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 1 ? 0 : 1);
+    })
 }
