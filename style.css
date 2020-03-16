@@ -111,27 +111,33 @@ main {
 .slider {
     position: absolute;
     height: 100%;
-    width: 1024px;
+    width: 1020px;
+    overflow: hidden;
 }
 
-.slider__images {
+.slider_container {
     position: absolute;
-    width: calc(100% - 112px - 112px);
+    width: 100%;
+    display: flex;
+    transition: transform 0.8s ease;
+}
+
+.slider_container__phone {
+    position: relative;
+    width: 100%;
     height: 100%;
-    left: 112px;
+    flex: 0 0 100%;
 }
 
 .slider__images2 {
-    position: absolute;
-    height: 100%;
-    width: 1024px;
     border-bottom: solid 6px white;
 }
 
 #slider__img__iphone1 {
-    width: 313px;
+    width: 309px;
     height: 100%;
     float: left;
+    margin-left: 112px;
 }
 
 #iphone_1 {
@@ -159,6 +165,7 @@ main {
     width: 487px;
     height: 100%;
     float: right;
+    margin-right: 108px;
 }
 
 #iphone_2 {
@@ -187,7 +194,9 @@ main {
     width: 112px;
     height: 100%;
     left: 0;
+    top: 0;
     cursor: pointer;
+    z-index: 4;
 }
 
 .slider__prev img {
@@ -200,11 +209,14 @@ main {
     width: 111px;
     height: 100%;
     right: 0;
+    top: 0;
     cursor: pointer;
+    z-index: 4;
 }
 
 .slider__prev:hover, .slider__next:hover  {
     opacity: 0.1;
+    z-index: 4;
     /* border: 2px solid black; */
     height: 600px;
     width: 111px;
@@ -213,7 +225,7 @@ main {
 
 .slider__next img {
     margin-top: 281px;
-    margin-left: 51px;
+    margin-left: 55px;
 }
 
 .services {
