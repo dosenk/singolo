@@ -143,13 +143,13 @@ main {
 #iphone_1 {
     position: absolute;
     z-index: 1;
-    padding-top: 53px;
+    margin-top: 53px;
 }
 
 #shadow_1 {
     position: absolute;
     z-index: 0;
-    padding-top: 53px;
+    margin-top: 53px;
 }
 
 #display_1 {
@@ -171,8 +171,8 @@ main {
 #iphone_2 {
     position: absolute;
     z-index: 1;
-    padding-bottom: 174px;
-    padding-right: 69px;
+    margin-top: 52px;
+    margin-left: 121px;
     transform: rotate(90deg);
 }
 
