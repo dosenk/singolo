@@ -1,32 +1,38 @@
 window.onload = () => {
-    // header
+
     moveToActiveSection();
     // main
     turnScreen();
     slideMainDisplay();
-    
-    
+    // Portfolio
+
+
+
 }
+
 // ############################# header ############################################
+
 const moveToActiveSection = () => {
     document.querySelector('.navigation').addEventListener('click', (e) => {
         if (e.target.classList.contains('nav')) {
             let clickedTag = e.target;
-            removeSelectedTags();
-            selectCleckedTag(clickedTag);
+            const y = document.querySelector(`.${clickedTag.text}`).getBoundingClientRect().top + window.pageYOffset - 65;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+            removeSelectedTags('nav_active');
+            selectCleckedTag(clickedTag, 'nav_active');
         }
     });
 }
 
-const removeSelectedTags = () => {
+const removeSelectedTags = (active_class) => {
     let tags = document.querySelectorAll('.navigation .nav');
     tags.forEach(tag => {
-        tag.classList.remove('active');
+        tag.classList.remove(active_class);
     });
 }
 
-const selectCleckedTag = (clicedTag) => {
-    clicedTag.classList.add('active');
+const selectCleckedTag = (clicedTag, active_class) => {
+    clicedTag.classList.add(active_class);
 }
 
 // ############################### main ###############################################
@@ -34,8 +40,8 @@ const selectCleckedTag = (clicedTag) => {
 const turnScreen = () => {
     let slider = document.querySelectorAll('.slider__images_display');
     slider.forEach(slid => {
-        slid.firstElementChild.addEventListener('click', 
-        () => event.toElement.nextElementSibling.style.opacity = event.toElement.nextElementSibling.style.opacity == 1 ? 0 : 1);
+        slid.firstElementChild.addEventListener('click',
+            () => event.toElement.nextElementSibling.style.opacity = event.toElement.nextElementSibling.style.opacity == 1 ? 0 : 1);
     })
 }
 
@@ -51,24 +57,30 @@ const slideMainDisplay = () => {
         currentSlide = slideTransform('left', currentSlide, slides);
     })
     right.addEventListener('click', () => {
-    currentSlide = slideTransform('right', currentSlide, slides);
+        currentSlide = slideTransform('right', currentSlide, slides);
     })
-    const slideTransform = (direction, currentSlide, slides) => {    
+    const slideTransform = (direction, currentSlide, slides) => {
         if (direction === 'left') {
-          position--;
-          if (currentSlide - 1 < 0) currentSlide = slides.length - 1;
-          else currentSlide = currentSlide - 1;
-          slides[currentSlide].style.transform = `translateX(${(-position)* step - currentSlide * step}px)`
-          sliderContainer.style.transform = `translateX(${position * step}px)`
-    
+            position--;
+            if (currentSlide - 1 < 0) currentSlide = slides.length - 1;
+            else currentSlide = currentSlide - 1;
+            slides[currentSlide].style.transform = `translateX(${(-position)* step - currentSlide * step}px)`
+            sliderContainer.style.transform = `translateX(${position * step}px)`
+
         }
         if (direction === 'right') {
-          position++;
-          if (currentSlide + 1 > slides.length - 1) currentSlide = 0;
-          else currentSlide = currentSlide + 1;
-          slides[currentSlide].style.transform = `translateX(${(-position)* step - currentSlide * step}px)`
-          sliderContainer.style.transform = `translateX(${position * step}px)`;
+            position++;
+            if (currentSlide + 1 > slides.length - 1) currentSlide = 0;
+            else currentSlide = currentSlide + 1;
+            slides[currentSlide].style.transform = `translateX(${(-position)* step - currentSlide * step}px)`
+            sliderContainer.style.transform = `translateX(${position * step}px)`;
         }
         return currentSlide;
-      }
+    }
+}
+
+// ############################################ Portfolio ###########################################
+
+const selectPortfolioTags = () => {
+
 }
