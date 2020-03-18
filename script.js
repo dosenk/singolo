@@ -5,8 +5,7 @@ window.onload = () => {
     turnScreen();
     slideMainDisplay();
     // Portfolio
-    shufflePortfolio();
-
+    shufflePortfolioImg();
 
 }
 
@@ -28,6 +27,8 @@ const removeSelectedTags = (searchClass, active_class) => {
     let tags = document.querySelectorAll(searchClass);
     tags.forEach(tag => {
         tag.classList.remove(active_class);
+        tag.removeAttribute('style');
+
     });
 }
 
@@ -81,26 +82,25 @@ const slideMainDisplay = () => {
 
 // ############################################ Portfolio ###########################################
 
-const shufflePortfolio = () => {
-
-    document.querySelector('.portfolio__tags').addEventListener('click', (e) => {
-
+const shufflePortfolioImg = () => {
+    
+    document.querySelector('.portfolio').addEventListener('click', (e) => {
+       
         if (e.target.classList.contains('tag')) {
             let clickedTag = e.target;
             removeSelectedTags('.tag', 'tag_active');
             selectCleckedTag(clickedTag, 'tag_active');
-            // shufflePortfolioImg();
-            let images = document.querySelectorAll('.portfolio__picture');
-            let firstIndex = images[0].src.lastIndexOf('_') + 1;
-            let step = images[0].src.slice(firstIndex, -4);
-            let form = document.querySelector('.portfolio__pictures');
-            images.forEach(img => {
-                img.remove();
-                step === images.length ? step = 1 : ++step;
-                document.createElement('img');
-                img.src = `file:///home/dos/app/rs_school/singolo/assets/img/portfolio_${step}.png`
-                form.appendChild(img);
-            });
+            let images = document.querySelector('.portfolio__pictures');
+            let child_nodes = images.children;
+            let newNode = child_nodes[0];
+            child_nodes[0].remove();
+            images.appendChild(newNode);
+        } else if (e.target.classList.contains('portfolio__picture')) {
+            let clickedTag = e.target;
+            removeSelectedTags('.portfolio__picture', 'porfolio__img__active');
+            selectCleckedTag(clickedTag, 'porfolio__img__active');
+            clickedTag.style.width = '210px';
+            clickedTag.style.height = '177px';          
         }
     });
 }

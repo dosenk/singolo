@@ -402,6 +402,12 @@ main {
     margin: 10px;
 }
 
+.porfolio__img__active {
+    /* width: 210px;
+    height: 177px; */
+    border: 5px solid #F06C64;
+}
+
 .portfolio__line {
     position: absolute;
     width: 100%;
