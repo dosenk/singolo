@@ -10,6 +10,7 @@ body {
     margin: 0 auto;
     height: 1100px;
     padding: 0;
+    /* overflow: hidden; */
 }
 
 .container {
@@ -408,9 +409,8 @@ main {
 }
 
 .porfolio__img__active {
-    /* width: 210px;
-    height: 177px; */
-    border: 5px solid #F06C64;
+    outline: 5px solid #f06c64;
+    transition: outline 0.3s, transform 0.3s linear;
 }
 
 .portfolio__line {
@@ -611,6 +611,7 @@ main {
     background-color: #f0d8d9;
     color: #d6564f;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .quote_info__about {
@@ -709,4 +710,46 @@ footer .container {
 
 .icon img {
     margin-right: 5px;
+}
+
+.modal {
+    position: fixed;
+    /* z-index: 10; */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+#modal_message {
+    position: relative;
+    margin: 0 auto;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    font-size: 18px;
+    color: #f0d8d9;
+    background-color: #666d89;
+    border: 1px solid rgb(134, 134, 134);
+    border-radius: 15px;
+    font-family: 'Lato';
+}
+
+#modal_message button {
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    bottom: -25px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#modal_message p:first-child {
+    margin: 0;
+    border-bottom: 1px solid;
 }

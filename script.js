@@ -1,12 +1,13 @@
 window.onload = () => {
-    // let step = 0;
+    // Header
     moveToActiveSection();
-    // main
+    // Main
     turnScreen();
     slideMainDisplay();
     // Portfolio
     shufflePortfolioImg();
-
+    // Form
+    sendForm();
 }
 
 // ############################# header ############################################
@@ -27,8 +28,6 @@ const removeSelectedTags = (searchClass, active_class) => {
     let tags = document.querySelectorAll(searchClass);
     tags.forEach(tag => {
         tag.classList.remove(active_class);
-        tag.removeAttribute('style');
-
     });
 }
 
@@ -41,8 +40,9 @@ const selectCleckedTag = (clicedTag, active_class) => {
 const turnScreen = () => {
     let slider = document.querySelectorAll('.slider__images_display');
     slider.forEach(slid => {
-        slid.firstElementChild.addEventListener('click',
-            () => event.toElement.nextElementSibling.style.opacity = event.toElement.nextElementSibling.style.opacity == 1 ? 0 : 1);
+        slid.firstElementChild.addEventListener('click', () => {
+            event.target.nextElementSibling.style.opacity = event.target.nextElementSibling.style.opacity == 1 ? 0 : 1;
+        });
     })
 }
 
@@ -99,8 +99,34 @@ const shufflePortfolioImg = () => {
             let clickedTag = e.target;
             removeSelectedTags('.portfolio__picture', 'porfolio__img__active');
             selectCleckedTag(clickedTag, 'porfolio__img__active');
-            clickedTag.style.width = '210px';
-            clickedTag.style.height = '177px';
         }
     });
+}
+
+// ######################################### Form (Get a Quote) #######################################
+
+const sendForm = () => {
+
+    document.querySelector('.contact_information form').onsubmit = function() {
+
+        let contactForm = document.querySelector('.contact');
+        let inputSubject = document.querySelector('.contact #contact_subject');
+        let inputDetail = document.querySelector('.contact #contact_detail');
+        let subjectText = inputSubject.value === 'Singolo' ? 'Тема: Singolo' : 'Без темы';
+        let detailText = inputDetail.value === 'Portfolio project' ? 'Описание: Portfolio project' : 'Без описания';
+        let modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `<div id='modal_message'>
+                            <p>Письмо отправлено</p><p>${subjectText}</p>
+                            <p>${detailText}</p>
+                            <button id='modal_btn'>OK</button>
+                            </div>`;
+        document.body.insertBefore(modal, contactForm);
+        document.body.style.overflow = 'hidden';
+        document.getElementById('modal_btn').addEventListener('click', () => {
+            modal.remove();
+            document.body.removeAttribute('style');
+        })
+        return false;
+    }
 }
