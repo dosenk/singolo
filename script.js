@@ -83,9 +83,9 @@ const slideMainDisplay = () => {
 // ############################################ Portfolio ###########################################
 
 const shufflePortfolioImg = () => {
-    
+
     document.querySelector('.portfolio').addEventListener('click', (e) => {
-       
+
         if (e.target.classList.contains('tag')) {
             let clickedTag = e.target;
             removeSelectedTags('.tag', 'tag_active');
@@ -100,7 +100,7 @@ const shufflePortfolioImg = () => {
             removeSelectedTags('.portfolio__picture', 'porfolio__img__active');
             selectCleckedTag(clickedTag, 'porfolio__img__active');
             clickedTag.style.width = '210px';
-            clickedTag.style.height = '177px';          
+            clickedTag.style.height = '177px';
         }
     });
 }

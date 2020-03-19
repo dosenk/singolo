@@ -24,6 +24,7 @@ header {
     border-bottom: 6px solid #323746;
     position: fixed;
     z-index: 1000;
+    top: 0;
 }
 
 header .container {
@@ -104,11 +105,9 @@ nav {
 
 main {
     position: relative;
-    top: 95px;
+    margin-top: 95px;
     width: 100%;
-    background-color: #f06c64;
-    height: 689px;
-    border-bottom: solid 6px #ea676b;
+    height: 600px;
 }
 
 .slider {
@@ -133,7 +132,13 @@ main {
 }
 
 .slider__images2 {
-    border-bottom: solid 6px white;
+    border-bottom: 6px solid white;
+}
+
+.slider__images1 {
+    height: 594px;
+    background-color: rgb(240, 108, 100);
+    border-bottom: 6px solid rgb(234, 103, 107);
 }
 
 #slider__img__iphone1 {
