@@ -6,12 +6,25 @@ html {
 }
 
 body {
-    width: 1020px;
+    width: 100%;
     margin: 0 auto;
     height: 1100px;
     padding: 0;
     /* overflow: hidden; */
 }
+@media only screen and (max-width: 1020px) {
+    body {
+      /* background-color: lightblue; */
+      width: 1020px;
+    }
+  }
+
+@media only screen and (max-width: 768px) {
+    body {
+      /* background-color: lightblue; */
+      max-width: 768px;
+    }
+  }
 
 .container {
     font-family: 'Lato';
