@@ -12,18 +12,19 @@ body {
     padding: 0;
     /* overflow: hidden; */
 }
-/* @media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1020px) {
     body {
+      /* background-color: lightblue; */
       width: 1020px;
     }
   }
 
 @media only screen and (max-width: 768px) {
     body {
-  
+      /* background-color: lightblue; */
       max-width: 768px;
     }
-  } */
+  }
 
 .container {
     font-family: 'Lato';
@@ -173,7 +174,7 @@ main {
     margin-top: 53px;
 }
 
-# display_1 {
+#display_1 {
     position: absolute;
     z-index: 2;
     margin: 115px 0 0 11px;
