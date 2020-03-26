@@ -18,13 +18,13 @@ body{
   }
 
   .container {
-    width: 1020px;
+    /* width: 1020px; */
     height: 100%;
   }
   
   header{
     background-color: #2d303a;
-    width: 1020px; 
+    /* width: 1020px;  */
     height: 89px;
     border-bottom: 6px solid #323746;
   }
@@ -134,6 +134,7 @@ body{
     position: absolute;
     z-index: 1;
     padding-top: 53px;
+    cursor: pointer;
   }
 
   #shadow_1 {
@@ -161,6 +162,7 @@ body{
     padding-bottom: 173px;
     padding-right: 69px;
     transform: rotate(90deg);
+    cursor: pointer;
   }
 
   #shadow_2 {
