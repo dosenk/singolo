@@ -1,4 +1,5 @@
 window.onload = () => {
+    let flag = true;
     // Header
     moveToActiveSection();
     // Main
@@ -8,18 +9,32 @@ window.onload = () => {
     shufflePortfolioImg();
     // Form
     sendForm();
+    // Menu-btn
+    showMenuBtn(flag);
 }
 
 // ############################# header ############################################
 
 const moveToActiveSection = () => {
+    let nav = document.querySelector('nav');
+    let navigation = document.querySelector('.navigation');
+    let li =  document.querySelector('.nav');
+    let btn = document.querySelector('.menu-btn');
+    let header = document.querySelector('header');
+    let logo = document.querySelector('.logo');
     document.querySelector('.navigation').addEventListener('click', (e) => {
         if (e.target.classList.contains('nav')) {
             let clickedTag = e.target;
-            const y = document.querySelector(`.${clickedTag.text}`).getBoundingClientRect().top + window.pageYOffset - 89;
+            const y = document.querySelector(`.${clickedTag.text}`).getBoundingClientRect().top + window.pageYOffset - header.scrollHeight;
             window.scrollTo({ top: y, behavior: 'smooth' });
             removeSelectedTags('.nav', 'nav_active');
             selectCleckedTag(clickedTag, 'nav_active');
+            nav.style = '';
+            navigation.style = '';
+            li.style = '';
+            btn.style = '';
+            logo.style = '';
+            showMenuBtn(true);
         }
     });
 }
@@ -51,7 +66,7 @@ const slideMainDisplay = () => {
     const left = document.querySelector('.slider__next');
     const right = document.querySelector('.slider__prev');
     const sliderContainer = document.querySelector('.slider_container');
-    let step = sliderContainer.offsetWidth;
+    let step;
     let currentSlide = 0;
     let position = 0;
     left.addEventListener('click', () => {
@@ -61,6 +76,7 @@ const slideMainDisplay = () => {
         currentSlide = slideTransform('right', currentSlide, slides);
     })
     const slideTransform = (direction, currentSlide, slides) => {
+        step = sliderContainer.offsetWidth;
         if (direction === 'left') {
             position--;
             if (currentSlide - 1 < 0) currentSlide = slides.length - 1;
@@ -129,4 +145,33 @@ const sendForm = () => {
         })
         return false;
     }
+}
+
+// ######################################### menu-btn #######################################
+
+const showMenuBtn = (flag) => {
+    let nav = document.querySelector('nav');
+    let navigation = document.querySelector('.navigation');
+    let li =  document.querySelectorAll('.navigation li');
+    let btn = document.querySelector('.menu-btn');
+    let logo = document.querySelector('.logo');
+    btn.addEventListener('click', (e) => {
+        if (flag) {
+            btn.style = 'transform: rotate(90deg);';
+            nav.style = 'display: flex; width: 278px; height: 812px;margin: 0;position: fixed;background: #2D303A;'
+            navigation.style = 'width: 100px;height: 260px;justify-content: space-around;flex-direction: column;margin: auto;'
+            logo.style = 'z-index: 1002; margin: 2px 0 0 71px;'
+            li.forEach (li => {
+                li.style = 'list-style-type: none;';
+            })
+            flag = false;
+        } else {
+            nav.style = '';
+            navigation.style = '';
+            li.style = '';
+            btn.style = '';
+            logo.style = '';
+            flag = true;
+        }
+    })
 }

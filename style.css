@@ -34,6 +34,9 @@ header .container {
     padding: 0;
     height: 83px;
 }
+.menu-btn {
+       display: none; 
+}
 
 .logo {
     float: left;
@@ -234,7 +237,7 @@ main {
     max-height: 594px;
     width: 9%;
     height: 100%;
-    width: 111px;
+    /* width: 111px; */
     background-color: white;
 }
 
@@ -395,7 +398,7 @@ main {
 }
 
 .portfolio__pictures {
-    min-height: 620px;
+    /* min-height: 620px; */
     padding-top: 9px;
     padding-bottom: 9px;
     display: flex;
@@ -409,6 +412,10 @@ main {
     transition: outline 0.3s, transform 0.3s linear;
 }
 
+.portfolio__pictures img {
+    width: 100%;   
+}
+
 .portfolio__line {
     position: absolute;
     width: 100%;
@@ -418,7 +425,7 @@ main {
 }
 
 .about {
-    height: 728px;
+    /* height: 728px; */
     position: relative;
     background-color: #f2f2f2;
     padding: 0;
@@ -753,21 +760,19 @@ footer .container {
 }
 
 .portfolio__pictures_img {
-    flex: 1fr 1fr 1fr 1fr;
+    /* flex: 1fr 1fr 1fr 1fr; */
     margin: 10px;
 }
 
 /* ################################################ @media ################################################### */
 
-@media only screen and (max-width: 1019px) {
+@media only screen and (max-width: 1019px) and (min-width: 768px){
     main {
-        min-height: 447.25px;
+        /* min-height: 447.25px; */
     }
-    .portfolio__pictures img {
-        width: 100%;   
-    }
+
     .portfolio__pictures_img {
-        flex: 1fr 1fr 1fr;
+        /* flex: 1fr 1fr 1fr; */
         width: calc(100% / 3 - 20px);
         margin: 10px;
     }
@@ -813,16 +818,175 @@ footer .container {
     .contact_information form input {
         min-width: 442px;
     }
-  }
 
-@media only screen and (max-width: 767px) {
-    .portfolio__pictures img {
-        width: 216.19px;
-        height: 183.76px;
-        margin: 19.5px;
+    .quote_info p {
+        width: 221px;
+    }
+
+    .social_icons {
+        margin-top: 0;
+    }
+
+    .about_us__empl p {
+        height: 63px;
+    }
+
+    .services__discription {
+        padding: 3px 32px 0px 32px;
+    }
+    .services__discription p {
+        text-align: left;
     }
   }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 767px) and (min-width: 375px){
+    header {
+        height: 65px;
+    }
+    header .container {
+        height: 71px;
+        display: flex;
+    }
+    .logo {
+        margin: auto;
+    }
 
+    nav {
+        display: none;
+    }
+    #slider__img__iphone1 {
+        width: 88.24px;
+        height: 177.57px;
+        margin: auto;
+        margin-right: 25px;
+    }
+    #iphone_1 {
+        width: 79.28px;
+    }
+    
+    #display_1 {
+        margin: 24px 0 0 5px;
+        width: 69.12px;
+        height: 122.43px;
+    }
+
+    #slider__img__iphone2 {
+        width: 177.57px;
+        height: 88.24px;
+        margin: auto;
+        margin-left: 0px;
+    }
+    #iphone_2 {
+        width: 168.1px;
+    }
+    
+    #display_2 {
+        margin: 4px 0 0 22px;
+        width: 122.43px;
+    }
+
+    .services__blocks {
+        margin: -25px 43px -50px 22px;
+    }
+
+    .about .container h2, .portfolio .container h2 {
+        margin: 0;
+    }
+    .portfolio {
+        height: 844px;
+        /* overflow: hidden; */
+    }
+    .portfolio p {
+        line-height: 30px;
+    }
+
+    .portfolio__pictures {
+        padding-top: 19px;
+        height: 558px;
+    }
+    .portfolio__pictures_img {
+        width: calc(100% / 2 - 13px);
+        margin: 7px 6.5px;
+    }
+
+    .portfolio__tags {
+        padding-top: 24px;
+    }
+
+    .about_us__info {
+        flex-wrap: wrap;
+        margin: 0;
+       
+    }
+
+    .about_us__empl {
+        width: 100%;
+        margin-bottom: 34px;
+        margin-right: 1px;
+    }
+    .contact_information form {
+        margin: 0;
+    }
+
+    .contact_information {
+        flex-wrap: wrap;
+    }
+
+    .about_us__empl {
+        height: unset;
+    }
+
+    #copyright {
+        display: none;
+    }
+
+    footer .container {
+        display: flex;
+        height: 100%;
+    }
+    .social_media {
+        margin: auto;
+    }
+
+    /* ####################################### menu-btn ###################################################### */
+
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-top: 26px;
+        width: 25px;
+        height: 20px;
+        position: fixed;
+        z-index: 1001;
+    }
+
+    .menu-btn span {
+        display: block;
+        background-color: #ffffff;
+        width: 100%;
+        height: 2.4px;
+        border-radius: 5px;
+    }
+
+    /* nav {
+        display: flex;
+        width: 278px;
+        height: 812px;
+        margin: 0;
+        position: fixed;
+        background: #2D303A;
+    }
+
+    .navigation {
+        width: 100px;
+        height: 260px;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: auto;
+    }
+    .navigation li{
+        list-style-type: none;
+    } */
   }
