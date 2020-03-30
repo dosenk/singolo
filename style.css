@@ -969,9 +969,7 @@ footer .container {
     #contact__send_form {
         width: 100%;
     }
-    .portfolio__pictures div:nth-child(n-4) {
-        display: none;
-    }
+
   }
 
   @media only screen and (max-width: 374px) {
