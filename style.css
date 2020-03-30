@@ -237,7 +237,6 @@ main {
     max-height: 594px;
     width: 9%;
     height: 100%;
-    /* width: 111px; */
     background-color: white;
 }
 
@@ -277,7 +276,6 @@ main {
 }
 
 .services__blocks {
-    /* width: 949px; */
     min-height: 246px;
     display: inline-flex;
     flex-wrap: wrap;
@@ -288,7 +286,6 @@ main {
 
 .services__block {
     position: relative;
-    /* width: 310px; */
     height: 123px;
     display: flex;
     overflow: hidden;
@@ -398,7 +395,6 @@ main {
 }
 
 .portfolio__pictures {
-    /* min-height: 620px; */
     padding-top: 9px;
     padding-bottom: 9px;
     display: flex;
@@ -425,7 +421,6 @@ main {
 }
 
 .about {
-    /* height: 728px; */
     position: relative;
     background-color: #f2f2f2;
     padding: 0;
@@ -567,7 +562,6 @@ main {
 
 .contact_information form {
     width: 619px;
-    /* height: 379px; */
     margin: 26px 20px 0 0;
 }
 
@@ -621,6 +615,10 @@ main {
     color: #886A30;
     font-size: 12px;
     cursor: pointer;
+    text-indent: unset;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
 }
 
 .quote_info__about {
@@ -769,9 +767,6 @@ footer .container {
 /* ################################################ @media ################################################### */
 
 @media only screen and (max-width: 1019px) and (min-width: 768px){
-    main {
-        /* min-height: 447.25px; */
-    }
 
     .portfolio__pictures_img {
         /* flex: 1fr 1fr 1fr; */
@@ -896,7 +891,6 @@ footer .container {
     }
     .portfolio {
         height: 844px;
-        /* overflow: hidden; */
     }
     .portfolio p {
         line-height: 30px;
@@ -972,27 +966,11 @@ footer .container {
         border-radius: 5px;
     }
 
-    /* nav {
-        display: flex;
-        width: 278px;
-        height: 812px;
-        margin: 0;
-        position: fixed;
-        background: #2D303A;
-    }
-
-    .navigation {
-        width: 100px;
-        height: 260px;
-        justify-content: space-around;
-        flex-direction: column;
-        margin: auto;
-    }
-    .navigation li{
-        list-style-type: none;
-    } */
     #contact__send_form {
         width: 100%;
+    }
+    .portfolio__pictures div:nth-child(n-4) {
+        display: none;
     }
   }
 
@@ -1016,4 +994,6 @@ footer .container {
     .portfolio__tags {
         margin-left: 0;
     }
+
+    
   }
