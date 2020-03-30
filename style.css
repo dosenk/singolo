@@ -614,9 +614,11 @@ main {
 }
 
 #contact__send_form {
-    height: 36px;
-    background-color: #f0d8d9;
-    color: #d6564f;
+    min-width: unset;
+    height: 38px;
+    width: 136px;
+    background-color: #FBC65F;
+    color: #886A30;
     font-size: 12px;
     cursor: pointer;
 }
@@ -734,7 +736,7 @@ footer .container {
     top: 30%;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 50vw;
     height: 200px;
     padding: 10px;
     font-size: 18px;
@@ -839,7 +841,7 @@ footer .container {
     }
   }
 
-@media only screen and (max-width: 767px) and (min-width: 375px){
+@media only screen and (max-width: 767px) {
     header {
         height: 65px;
     }
@@ -989,4 +991,29 @@ footer .container {
     .navigation li{
         list-style-type: none;
     } */
+    #contact__send_form {
+        width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 374px) {
+    #contact__send_form {
+        width: 100%;
+    }
+
+    .contact__send_form {
+        width: 100%;
+    }
+
+    #slider__img__iphone1 {
+        margin-right: 5px;
+    }
+
+    .portfolio__tags button {
+        margin-right: 0px;
+    }
+
+    .portfolio__tags {
+        margin-left: 0;
+    }
   }

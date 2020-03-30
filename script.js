@@ -158,7 +158,7 @@ const showMenuBtn = (flag) => {
     btn.addEventListener('click', (e) => {
         if (flag) {
             btn.style = 'transform: rotate(90deg);';
-            nav.style = 'display: flex; width: 278px; height: 812px;margin: 0;position: fixed;background: #2D303A;'
+            nav.style = `display: flex; width: 278px; height: ${document.documentElement.clientHeight}px;margin: 0;position: fixed;background: #2D303A;`
             navigation.style = 'width: 100px;height: 260px;justify-content: space-around;flex-direction: column;margin: auto;'
             logo.style = 'z-index: 1002; margin: 2px 0 0 71px;'
             li.forEach (li => {
