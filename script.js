@@ -128,6 +128,8 @@ const sendForm = () => {
         let contactForm = document.querySelector('.contact');
         let inputSubject = document.querySelector('.contact #contact_subject');
         let inputDetail = document.querySelector('.contact #contact_detail');
+        let inputName = document.querySelector('.contact #contact_name');
+        let inputEmail = document.querySelector('.contact #contact_email');
         let subjectText = inputSubject.value === 'Singolo' ? 'Тема: Singolo' : 'Без темы';
         let detailText = inputDetail.value === 'Portfolio project' ? 'Описание: Portfolio project' : 'Без описания';
         let modal = document.createElement('div');
@@ -142,6 +144,8 @@ const sendForm = () => {
         document.getElementById('modal_btn').addEventListener('click', () => {
             modal.remove();
             document.body.removeAttribute('style');
+            inputName.value = '';
+            inputEmail.value = '';
         })
         return false;
     }
