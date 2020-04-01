@@ -130,8 +130,8 @@ const sendForm = () => {
         let inputDetail = document.querySelector('.contact #contact_detail');
         let inputName = document.querySelector('.contact #contact_name');
         let inputEmail = document.querySelector('.contact #contact_email');
-        let subjectText = inputSubject.value === 'Singolo' ? 'Тема: Singolo' : 'Без темы';
-        let detailText = inputDetail.value === 'Portfolio project' ? 'Описание: Portfolio project' : 'Без описания';
+        let subjectText = inputSubject.value !== '' ? `Тема: ${inputSubject.value}` : 'Без темы';
+        let detailText = inputDetail.value !== '' ? `Описание:  ${inputDetail.value}` : 'Без описания';
         let modal = document.createElement('div');
         modal.className = 'modal';
         modal.innerHTML = `<div id='modal_message'>
@@ -146,6 +146,8 @@ const sendForm = () => {
             document.body.removeAttribute('style');
             inputName.value = '';
             inputEmail.value = '';
+            inputSubject.value = '';
+            inputDetail.value = '';
         })
         return false;
     }
